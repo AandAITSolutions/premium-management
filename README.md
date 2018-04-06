@@ -1,2 +1,2 @@
 # premium-management
-Manages the amotasation of insurance premium 
+Manages the amortisation of insurance premium 

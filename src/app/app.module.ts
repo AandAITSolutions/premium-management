@@ -7,14 +7,18 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
 import { UserService } from './users/user.service';
+import { SidenavComponent } from './structure/sidenav/sidenav.component';
+import { MaterialModule } from './shared/material/material.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule.enablePersistence()
   ],

@@ -1,14 +1,15 @@
 <mat-sidenav-container class="ana-sidenav-container mat-typography">
     <mat-sidenav #sidenav class="mat-elevation-z11"
                 [opened]="!isScreenSmall()"
-                [mode]="isScreenSmall()? 'over' : 'side'">
+                [mode]="isScreenSmall()? 'over' : 'side'"
+                >
       <div class="ana-sidenav">
           <div class="ana-sidenav-header mat-elevation-z6">
              <div class="logo">
                <img class="logo-icon" src="./assets/images/logo/analogo1.png">
                <span class="logo-text">A&A</span>
               </div>             
-             <button mat-icon-button>
+             <button mat-icon-button (click)= "mainToolbar.toggleOpen()">
               <mat-icon aria-label="icon-button">menu</mat-icon>
             </button>
           </div>
@@ -21,8 +22,8 @@
     </mat-sidenav>
     <div >    
          <div class="main-content">
-            <div class="ana-main-toolbar">
-              <ana-main-toolbar></ana-main-toolbar>
+            <div class="ana-main-toolbar" >
+              <ana-main-toolbar (toggleSidenav)="sidenav.toggle()"></ana-main-toolbar>
             </div>
             <div class="content-container"></div>
          </div>       

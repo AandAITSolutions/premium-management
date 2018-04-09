@@ -1,5 +1,5 @@
 <mat-toolbar class="mat-elevation-z6">
-    <button mat-button class="sidenav-toggle" (click) = "toggleSidenav.emit()">
+    <button mat-icon-button *ngIf="isOpened"   (click) = "toggleOpen()">
       <mat-icon>menu</mat-icon>
     </button>
     <span>Premium Manager</span>

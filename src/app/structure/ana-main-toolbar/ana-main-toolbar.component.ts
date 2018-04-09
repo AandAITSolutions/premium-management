@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'ana-main-toolbar',
@@ -7,9 +7,22 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class AnaMainToolbarComponent implements OnInit {
   @Output() toggleSidenav = new EventEmitter<void>();
-  constructor() { }
+  
 
-  ngOnInit() {
+  isOpened: boolean = false;
+  constructor() { 
+
   }
 
+  ngOnInit() {
+  
+  }
+
+  toggleOpen(){
+    this.toggleSidenav.emit();   
+    this.isOpened = !this.isOpened;
+  }
+
+
+  
 }

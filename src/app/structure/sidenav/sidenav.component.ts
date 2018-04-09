@@ -1,4 +1,5 @@
-import { Component, OnInit, NgZone } from '@angular/core';
+import { Component, OnInit, NgZone, ViewChild } from '@angular/core';
+import { AnaMainToolbarComponent } from '../ana-main-toolbar/ana-main-toolbar.component';
 
 const SMALL_WIDTH_BREAKPOINT = 720;
 
@@ -11,7 +12,7 @@ export class SidenavComponent implements OnInit {
 
   private mediaMatcher: MediaQueryList = matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px`);
 
-  
+  @ViewChild(AnaMainToolbarComponent) mainToolbar: AnaMainToolbarComponent;
   constructor(zone: NgZone) {
 
     this.mediaMatcher.addListener(mql => 
@@ -22,6 +23,9 @@ export class SidenavComponent implements OnInit {
     
 
     
+  }
+  hithere(){
+    console.log("hi there");
   }
   
   isScreenSmall(): boolean {

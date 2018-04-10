@@ -1,16 +1,57 @@
 $iconWidth: 56px;
+$userButtonHeight: 64px;
+.toolbar-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  .app-title{
+    .sidenav-toggle {
+       padding: 0;    
+       min-width: $iconWidth;
+        
+       @media (max-width: 720px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }    
+    }
+   }
+ 
+  .user{
+    display: flex;
+    align-items: center;
+    flex-direction: row;    
+    height: $userButtonHeight;
 
-.sidenav-toggle {
-    display: none;
+    .user-button, .logout{
+        height:$userButtonHeight;
+        border-right: 1px solid #949393;
+    }
+    
+    .user-button{
+        border-left: 1px solid #949393;
+        
+        .user-button-wrapper{
+            display: flex;
+            flex-direction: row;
+            
+            .avatar{
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              background-color: teal;
+              margin-right: 10px;
+            }
 
-    padding: 0;
-    margin: 8px;
-    min-width: $iconWidth;
-    @media (max-width: 720px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+            .username{
+
+            }
+        }
     }
 
    
+  }
+ 
 }
+

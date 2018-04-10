@@ -1,6 +1,18 @@
-<mat-toolbar class="mat-elevation-z6">
-    <button mat-icon-button class="" *ngIf="isOpened"   (click) = "hasChanged()">
+<mat-toolbar class="toolbar-items mat-elevation-z6">
+    
+  <div class="app-title">
+    <button mat-icon-button class="sidenav-toggle" *ngIf="isOpened"   (click) = "hasChanged()">
       <mat-icon>menu</mat-icon>
     </button>
     <span>Premium Manager</span>
+  </div>
+  <div class="user">
+      <button class="user-button" mat-button >
+        <div class="user-button-wrapper">
+          <img src="assets" alt="" class="avatar">
+          <span class="username">Alexandner</span>
+        </div>
+      </button>
+      <button mat-button class="logout">Logout</button>
+  </div>
 </mat-toolbar>

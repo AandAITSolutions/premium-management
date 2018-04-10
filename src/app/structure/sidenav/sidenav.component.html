@@ -2,14 +2,15 @@
     <mat-sidenav #sidenav class="mat-elevation-z11"
                 [opened]="!isScreenSmall()"
                 [mode]="isScreenSmall()? 'over' : 'side'"
-                >
+                (closedStart)="mainToolbar.toggleOpened()"
+                (openedStart)="mainToolbar.toggleOpened()">
       <div class="ana-sidenav">
           <div class="ana-sidenav-header mat-elevation-z6">
              <div class="logo">
                <img class="logo-icon" src="./assets/images/logo/analogo1.png">
                <span class="logo-text">A&A</span>
               </div>             
-             <button mat-icon-button (click)= "mainToolbar.toggleOpen()">
+             <button mat-icon-button (click)= "mainToolbar.hasChanged()">
               <mat-icon aria-label="icon-button">menu</mat-icon>
             </button>
           </div>

@@ -9,7 +9,7 @@ export class AnaMainToolbarComponent implements OnInit {
   @Output() toggleSidenav = new EventEmitter<void>();
   
 
-  isOpened: boolean = false;
+  isOpened: boolean = true;
   constructor() { 
 
   }
@@ -18,9 +18,12 @@ export class AnaMainToolbarComponent implements OnInit {
   
   }
 
-  toggleOpen(){
-    this.toggleSidenav.emit();   
-    this.isOpened = !this.isOpened;
+  hasChanged(){
+    this.toggleSidenav.emit();    
+  }
+
+  toggleOpened(){   
+    this.isOpened = !this.isOpened;    
   }
 
 

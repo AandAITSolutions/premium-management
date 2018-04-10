@@ -19,14 +19,8 @@ export class SidenavComponent implements OnInit {
       zone.run(() => this.mediaMatcher = mql))
    }
 
-  ngOnInit() {
-    
-
-    
-  }
-  hithere(){
-    console.log("hi there");
-  }
+  ngOnInit() {    
+  } 
   
   isScreenSmall(): boolean {
     return this.mediaMatcher.matches;

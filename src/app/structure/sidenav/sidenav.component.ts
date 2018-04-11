@@ -4,7 +4,7 @@ import { AnaMainToolbarComponent } from '../ana-main-toolbar/ana-main-toolbar.co
 const SMALL_WIDTH_BREAKPOINT = 720;
 
 @Component({
-  selector: 'app-sidenav',
+  selector: 'ana-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })

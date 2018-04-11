@@ -1,0 +1,43 @@
+.page-layout{
+    display:flex;
+    flex-direction: column;
+    .header{
+        height: 100px;
+       
+        background-color: teal;
+    
+    }
+    .content{
+        display: flex;
+        flex-direction: row;
+        
+        align-content: space-around;
+
+        .left-content{       
+            margin: 24px 0 0 24px;
+            width: 15%;
+            
+            background-color: teal;
+        }
+
+        .table{
+           width: 75%;
+           padding: 24px;
+        }
+
+        .right-content{
+           display: flex;
+           flex-direction: column;
+           align-content: center;
+           margin: 24px 24px 0 0;
+            width: 5%;
+            background-color: teal;
+
+            button{
+                transform: translateY(-100%);
+                display: inline-block;
+            }
+        }
+    }
+
+}

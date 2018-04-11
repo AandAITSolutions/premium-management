@@ -5,8 +5,10 @@
   <div class="content">
     <div class="left-content mat-elevation-z6"></div>
     <div class="table">
-      <ana-table></ana-table>
+      <ana-table [data] = 'users_data'></ana-table>
     </div>
-    <div class="right-content"><button mat-fab>plus</button></div>
+    <div class="right-content"><button mat-fab><mat-icon>
+      person_add
+    </mat-icon></button></div>
   </div>
 </div>
